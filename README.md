@@ -3,123 +3,198 @@ Questo gioco è un’esperienza narrativa/puzzle in cui il giocatore si trova di
 PRIMA STESURA GIOCO:
 
 LIVELLO 1 – Il primo click
-	Obiettivo
-		Cliccare il bottone centrale
-	Schermata
-		Un bottone grande al centro
-	Testo
-		“Benvenuto. Clicca il bottone.”
-	Regole
-		Qualsiasi click porta alla vittoria
-		Non ci sono timer
-		Non è possibile sbagliare
 
-LIVELLO 2 – Attendi il segnale
-	Obiettivo
-		Cliccare il bottone solo al momento giusto
-	Schermata
-		Lo stesso bottone del livello precedente
-		All’inizio non è cliccabile
-	Regole
-		Dopo 4 secondi il bottone diventa cliccabile
-		Se viene cliccato prima
-			Viene mostrato un errore
-			Il timer riparte
+Obiettivo  
+Cliccare il bottone centrale
 
-LIVELLO 3 – Numero corretto
-	Obiettivo
-		Cliccare il bottone esattamente 3 volte
-	Schermata
-		Bottone con contatore visibile
-		Testo: “Click: 0 / 3”
-	Regole
-		Ogni click aumenta il contatore
-		Al terzo click esatto il livello è completato
-		Se si clicca più di tre volte
-			Il contatore si resetta
+Schermata  
+Un bottone grande al centro
 
-LIVELLO 4 – La griglia appare
-	Obiettivo
-		Cliccare tre celle diverse della griglia
-	Schermata
-		Griglia 3x3
-		Testo: “Attiva tre celle”
-	Regole
-		Ogni cella cliccata cambia stato
-		Dopo tre celle diverse il livello è superato
-		Cliccare due volte la stessa cella non viene contato
+Regole
 
-LIVELLO 5 – Ordine corretto
-	Obiettivo
-		Cliccare le celle in ordine crescente
-	Schermata
-		Griglia 3x3
-		Numeri da 1 a 3 nascosti
-	Regole
-		Le celle devono essere cliccate nell’ordine 1, poi 2, poi 3
-		Se l’ordine è sbagliato
-			Il livello si resetta
+Qualsiasi click porta alla vittoria
 
-LIVELLO 6 – Memoria visiva
-	Obiettivo
-		Ricordare e cliccare le celle corrette
-	Schermata
-		Quattro celle vengono mostrate per un secondo
-	Regole
-		Dopo il lampeggio le celle tornano normali
-		Devono essere cliccate solo quelle viste prima
-		Se si clicca una cella sbagliata
-			Il livello si resetta
+Non ci sono timer
+
+Non è possibile sbagliare
+
+LIVELLO 2 – Numero corretto
+
+Obiettivo  
+Cliccare il bottone esattamente 3 volte
+
+Schermata  
+Bottone con contatore visibile
+
+Regole
+
+Ogni click aumenta il contatore
+
+Al terzo click esatto il livello è completato
+
+Se si clicca più di tre volte
+Il contatore si resetta
+
+LIVELLO 3 – Premere nell’ordine giusto i bottoni
+
+Obiettivo  
+Premere i bottoni seguendo l’ordine indicato
+
+Schermata  
+Tre bottoni etichettati A – B – C
+
+Regole
+
+All’inizio del livello il gioco mostra la sequenza per 1 secondo
+(esempio: A → C → B)
+
+Dopo la visualizzazione, i bottoni tornano normali
+
+Il giocatore deve premere i bottoni nell’ordine mostrato
+
+Se si sbaglia ordine
+Il livello si resetta
+
+Se la sequenza è completata correttamente
+Il livello è superato
+
+LIVELLO 4 – Caccia al colore
+
+Obiettivo  
+Cliccare le celle che cambiano colore
+
+Schermata  
+Griglia 3x3
+
+Regole
+
+Tre celle casuali si colorano per un secondo
+
+Dopo il lampeggio, tutte tornano normali
+
+Devono essere cliccate solo le tre celle che si erano colorate
+
+L’ordine non importa
+
+Se si clicca una cella sbagliata
+Il livello si resetta
+
+Dopo aver cliccato tutte e tre le celle corrette
+Il livello è completato
+
+LIVELLO 5 – Doppio click sincronizzato
+
+Obiettivo  
+Premere due bottoni quasi contemporaneamente
+
+Schermata  
+Due bottoni: uno a sinistra e uno a destra
+
+Regole
+
+I due bottoni devono essere cliccati entro mezzo secondo l’uno dall’altro
+
+Se il tempo tra i due click è troppo lungo
+Il livello si resetta
+
+Se vengono premuti abbastanza vicini
+Il livello è completato
+
+LIVELLO 6 – La cella fantasma
+
+Obiettivo  
+Trovare la cella nascosta
+
+Schermata  
+Griglia 3x3
+
+Regole
+
+Una sola cella è quella corretta
+
+Ogni click sbagliato mostra un indizio:
+“Freddo”, “Tiepido”, “Caldo”, “Bollente”
+
+Gli indizi dipendono dalla distanza dalla cella corretta
+
+Quando viene cliccata la cella giusta
+Il livello è superato
 
 LIVELLO 7 – Indovinello + azione
-	Obiettivo
-		Risolvere un indovinello e fare l’azione richiesta
-	Indovinello
-		“Cosa aumenta più viene tolto?”
-	Risposta
-		buco
-	Regole
-		Inserire la risposta corretta
-		La griglia si sblocca
-		Va cliccata la cella centrale
+
+Obiettivo  
+Risolvere un indovinello e fare l’azione richiesta
+
+Indovinello  
+“Cosa aumenta più viene tolto?”
+Risposta: buco
+
+Regole
+
+Inserire la risposta corretta
+
+La griglia si sblocca
+
+Va cliccata la cella centrale
 
 LIVELLO 8 – Trappole invisibili
-	Obiettivo
-		Evitare le celle sbagliate
-	Schermata
-		Griglia 4x4
-	Regole
-		Tre celle sono trappole
-		Se una trappola viene cliccata
-			Il livello si resetta
-		Devono essere cliccate tutte le celle sicure
 
-LIVELLO 9 – Sequenza
-	Obiettivo
-		Ripetere una sequenza di celle
-	Schermata
-		Griglia 3x3
-	Regole
-		Il gioco mostra tre celle in un certo ordine
-		Le celle devono essere cliccate nello stesso ordine
-		In caso di errore
-			La sequenza ricomincia
+Obiettivo  
+Evitare le celle sbagliate
+
+Schermata  
+Griglia 4x4
+
+Regole
+
+Tre celle sono trappole
+
+Se una trappola viene cliccata
+Il livello si resetta
+
+Devono essere cliccate tutte le celle sicure
+
+LIVELLO 9 – Percorso continuo
+
+Obiettivo  
+Cliccare cinque celle adiacenti formando un percorso
+
+Schermata  
+Griglia 3x3
+
+Regole
+
+Ogni cella cliccata deve essere adiacente alla precedente
+(orizzontale, verticale o diagonale)
+
+Non si può cliccare due volte la stessa cella
+
+Se si clicca una cella non adiacente
+Il percorso si annulla
+
+Dopo cinque celle valide
+Il livello è completato
 
 LIVELLO 10 – Prova finale
-	Obiettivo
-		Completare più azioni in sequenza
-	Regole
-		Attendere 3 secondi
-		Risolvere un indovinello
-		Ripetere una sequenza
-		Accendere tutte le celle della griglia
+
+Obiettivo  
+Completare più azioni in sequenza
+
+Regole
+
+Attendere 3 secondi
+
+Risolvere un indovinello
+
+Ripetere una sequenza
+
+Accendere tutte le celle della griglia
 
 FINE GIOCO
-	Messaggio finale
-		“Hai superato tutte le prove.”
-	Vengono mostrati
-		Username
-		Tempo totale di gioco
-	Pulsanti
-		Rigioca
-		Esci
+Messaggio finale: “Hai superato tutte le prove.”
+
+Vengono mostrati:
+
+Username
+
+Tempo di gioco

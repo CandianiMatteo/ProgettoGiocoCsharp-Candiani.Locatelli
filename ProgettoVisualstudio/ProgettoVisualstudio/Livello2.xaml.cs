@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace ProgettoVisualstudio
 {
     /// <summary>
-    /// Logica di interazione per MainWindow.xaml
+    /// Logica di interazione per livello2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Livello2 : UserControl
     {
-        public MainWindow()
+        public Livello2()
         {
             InitializeComponent();
-        }
-
-        private void button_start_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Livello2_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

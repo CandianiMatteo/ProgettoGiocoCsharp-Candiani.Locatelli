@@ -16,7 +16,7 @@
                 Height="120"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FocusVisualStyle="{x:Null}">
+                FocusVisualStyle="{x:Null}" Click="button_livello2_Click">
 
             <Button.Template>
                 <ControlTemplate TargetType="Button">

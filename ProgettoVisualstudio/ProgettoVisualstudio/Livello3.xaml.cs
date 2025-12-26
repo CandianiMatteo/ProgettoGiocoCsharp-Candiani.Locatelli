@@ -16,32 +16,13 @@ using System.Windows.Shapes;
 namespace ProgettoVisualstudio
 {
     /// <summary>
-    /// Logica di interazione per livello2.xaml
+    /// Logica di interazione per Livello3.xaml
     /// </summary>
-    public partial class Livello2 : UserControl
+    public partial class Livello3 : UserControl
     {
-        int cont = 0;
-
-
-        public Livello2()
+        public Livello3()
         {
             InitializeComponent();
-        }
-
-        private void button_livello2_Click(object sender, RoutedEventArgs e)
-        {
-            //cont++;
-
-            //if (cont == 3)
-            //{
-            //    livello3.Visibility = Visibility.Visible;
-            //}
-
-            //if (cont > 3)
-            //{
-            //    cont = 0;
-            //}
-
         }
     }
 }

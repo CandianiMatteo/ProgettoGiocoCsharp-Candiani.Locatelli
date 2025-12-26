@@ -36,3 +36,5 @@ C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locat
 C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\ProgettoVisualstudio.pdb
 C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Registrazione.baml
 C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Registrazione.g.cs
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello3.g.cs
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello3.baml

@@ -22,11 +22,11 @@ namespace ProgettoVisualstudio
     /// </summary>
     public partial class MainWindow : Window
     {
-        int contatoreClick = 0;
         public MainWindow()
         {
             InitializeComponent();
             livello2.Visibility = Visibility.Hidden;
+
 
         }
 
@@ -36,17 +36,7 @@ namespace ProgettoVisualstudio
         }
         private void button_start_Click_1(object sender, RoutedEventArgs e)
         {
-            contatoreClick++;
-
-            if (contatoreClick == 3)
-            {
                 livello2.Visibility = Visibility.Visible;
-            }
-
-            if (contatoreClick  > 3)
-            {
-                contatoreClick = 0;
-            }
         }
 
 

@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\progettovisualstudio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|solutionrelative:progettovisualstudio\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|c:\\users\\locat\\onedrive\\desktop\\progetto25-26\\progettogiococsharp-candiani.locatelli\\progettovisualstudio\\progettovisualstudio\\registrazione.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|solutionrelative:progettovisualstudio\\registrazione.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|c:\\users\\locat\\onedrive\\desktop\\progetto25-26\\progettogiococsharp-candiani.locatelli\\progettovisualstudio\\progettovisualstudio\\registrazione.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|solutionrelative:progettovisualstudio\\registrazione.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|c:\\users\\locat\\onedrive\\desktop\\progetto25-26\\progettogiococsharp-candiani.locatelli\\progettovisualstudio\\progettovisualstudio\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|solutionrelative:progettovisualstudio\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\progettovisualstudio\\livello2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20F906CB-282E-40CF-B59F-2D0AFB7D7237}|ProgettoVisualstudio\\ProgettoVisualstudio.csproj|solutionrelative:progettovisualstudio\\livello2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ProgettoVisualstudio\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ProgettoVisualstudio\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T11:59:50.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Registrazione.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Registrazione.xaml.cs",
+              "RelativeDocumentMoniker": "ProgettoVisualstudio\\Registrazione.xaml.cs",
+              "ToolTip": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Registrazione.xaml.cs",
+              "RelativeToolTip": "ProgettoVisualstudio\\Registrazione.xaml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwCUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T11:23:54.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Registrazione.xaml",
+              "DocumentMoniker": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Registrazione.xaml",
+              "RelativeDocumentMoniker": "ProgettoVisualstudio\\Registrazione.xaml",
+              "ToolTip": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Registrazione.xaml",
+              "RelativeToolTip": "ProgettoVisualstudio\\Registrazione.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-26T11:20:26.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Utente.cs",
+              "DocumentMoniker": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Utente.cs",
+              "RelativeDocumentMoniker": "ProgettoVisualstudio\\Utente.cs",
+              "ToolTip": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Utente.cs",
+              "RelativeToolTip": "ProgettoVisualstudio\\Utente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T11:18:46.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Livello2.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Livello2.xaml.cs",
+              "RelativeDocumentMoniker": "ProgettoVisualstudio\\Livello2.xaml.cs",
+              "ToolTip": "C:\\Users\\locat\\OneDrive\\Desktop\\Progetto25-26\\ProgettoGiocoCsharp-Candiani.Locatelli\\ProgettoVisualstudio\\ProgettoVisualstudio\\Livello2.xaml.cs",
+              "RelativeToolTip": "ProgettoVisualstudio\\Livello2.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T11:59:49.982Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

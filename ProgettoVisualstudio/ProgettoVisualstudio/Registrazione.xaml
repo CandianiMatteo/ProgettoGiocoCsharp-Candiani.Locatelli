@@ -1,0 +1,81 @@
+﻿<Window x:Class="ProgettoVisualstudio.Registrazione"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registrazione" Height="450" Width="800"
+        Background="#2E2E2E">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="300">
+
+            <!-- Titolo -->
+            <TextBlock Text="Registrazione"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+            <!-- Label -->
+            <TextBlock Text="Nome utente"
+                       FontSize="16"
+                       Foreground="#CCCCCC"
+                       Margin="0,0,0,5"/>
+
+            <!-- TextBox con bordo arrotondato -->
+            <Border Background="#444"
+                    CornerRadius="6"
+                    BorderBrush="#888"
+                    BorderThickness="2"
+                    Margin="0,0,0,20">
+                <TextBox x:Name="txtNomeUtente"
+                         Height="35"
+                         FontSize="16"
+                         Padding="8"
+                         Background="Transparent"
+                         Foreground="White"
+                         BorderThickness="0"/>
+            </Border>
+
+            <!-- Pulsante Salva -->
+            <Button x:Name="button_salva"
+                    Content="Salva"
+                    Height="40"
+                    FontSize="16"
+                    Background="#5A8DEE"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Margin="0,10,0,0" Click="button_salva_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                            CornerRadius="6">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+                        <!-- Effetto hover -->
+                        <Setter Property="Background" Value="#5A8DEE"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#3F6FCC"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#345BB0"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>

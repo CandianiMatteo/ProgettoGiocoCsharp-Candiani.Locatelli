@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1200">
     <Grid Background="#788273">
-        <Button x:Name="button_livello2"
+        <Button x:Name="button_start"
         Content=""
         Width="120"
         Height="120"
         HorizontalAlignment="Center"
         VerticalAlignment="Top"
-        FocusVisualStyle="{x:Null}" Margin="0,617,0,0">
+        FocusVisualStyle="{x:Null}" Margin="0,617,0,0" Click="button_start_Click_1">
 
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -69,7 +69,17 @@
 
         </Button>
         <ListBox HorizontalAlignment="Left" Height="0" Margin="566,415,0,0" VerticalAlignment="Top" Width="34" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <local:Livello2 HorizontalAlignment="Left" Margin="62,60,0,0" VerticalAlignment="Top" Loaded="Livello2_Loaded"/>
+        <Grid Margin="10,10,871,570" x:Name="livello2">
+            <local:Livello2 HorizontalAlignment="Left" Margin="40,37,0,0" VerticalAlignment="Top" Loaded="Livello2_Loaded"/>
+        </Grid>
+        <Button x:Name="buttone_registrazione" Content="Registrazione"
+        HorizontalAlignment="Left"
+        Margin="1014,657,0,0"
+        VerticalAlignment="Top"
+        Height="80"
+        Width="146"
+        Click="ApriRegistrazione_Click"/>
+
 
 
     </Grid>

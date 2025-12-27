@@ -69,7 +69,7 @@
 
         </Button>
         <ListBox HorizontalAlignment="Left" Height="0" Margin="566,415,0,0" VerticalAlignment="Top" Width="34" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Grid Margin="27,51,600,455" x:Name="livello2">
+        <Grid Margin="27,51,746,455" x:Name="livello2">
             <local:Livello2 HorizontalAlignment="Left" Margin="27,0,0,0" VerticalAlignment="Center" Loaded="Livello2_Loaded" Height="219"/>
         </Grid>
         <Button x:Name="buttone_registrazione" Content="Registrazione"
@@ -79,8 +79,8 @@
         Height="80"
         Width="146"
         Click="ApriRegistrazione_Click"/>
-        <Grid x:Name="livello3" Margin="750,10,40,562">
-            <local:Livello3 HorizontalAlignment="Left" Height="148" Margin="-26,25,0,0" VerticalAlignment="Top" Width="426"/>
+        <Grid x:Name="livello3" Margin="750,10,40,562" Visibility="Hidden">
+            <local:Livello3  HorizontalAlignment="Left" Height="148" Margin="-26,25,0,0" VerticalAlignment="Top" Width="426"  Loaded="Livello3_Loaded"/>
         </Grid>
         <local:Livello2 HorizontalAlignment="Left" Margin="1533,306,0,0" VerticalAlignment="Top"/>
 

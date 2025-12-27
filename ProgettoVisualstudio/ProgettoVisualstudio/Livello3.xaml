@@ -12,13 +12,12 @@
                 VerticalAlignment="Center"
                 Margin="0">
 
-            <!-- Bottone Rosso -->
-            <Button Content=""
+            <Button x:Name="BOTTONE1" Content="A"
                 Width="100"
                 Height="100"
                 Margin="15"
                 FontSize="18"
-                Foreground="White">
+                Foreground="White" Click="BOTTONE1_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border CornerRadius="50"
@@ -26,25 +25,20 @@
                             BorderBrush="#880000"
                             BorderThickness="4">
                             <Border.Effect>
-                                <DropShadowEffect Color="Black"
-                                              BlurRadius="15"
-                                              ShadowDepth="5"
-                                              Opacity="0.6"/>
+                                <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.6"/>
                             </Border.Effect>
-                            <ContentPresenter HorizontalAlignment="Center"
-                                          VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
 
-            <!-- Bottone Verde -->
-            <Button Content=""
+            <Button x:Name="BOTTONE2" Content="C"
                 Width="100"
                 Height="100"
                 Margin="15"
                 FontSize="18"
-                Foreground="White">
+                Foreground="White" Click="BOTTONE2_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border CornerRadius="50"
@@ -52,25 +46,20 @@
                             BorderBrush="#004400"
                             BorderThickness="4">
                             <Border.Effect>
-                                <DropShadowEffect Color="Black"
-                                              BlurRadius="15"
-                                              ShadowDepth="5"
-                                              Opacity="0.6"/>
+                                <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.6"/>
                             </Border.Effect>
-                            <ContentPresenter HorizontalAlignment="Center"
-                                          VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
 
-            <!-- Bottone Blu -->
-            <Button Content=""
+            <Button x:Name="BOTTONE3" Content="B"
                 Width="100"
                 Height="100"
                 Margin="15"
                 FontSize="18"
-                Foreground="White">
+                Foreground="White" Click="Button_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border CornerRadius="50"
@@ -78,18 +67,15 @@
                             BorderBrush="#000066"
                             BorderThickness="4">
                             <Border.Effect>
-                                <DropShadowEffect Color="Black"
-                                              BlurRadius="15"
-                                              ShadowDepth="5"
-                                              Opacity="0.6"/>
+                                <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="5" Opacity="0.6"/>
                             </Border.Effect>
-                            <ContentPresenter HorizontalAlignment="Center"
-                                          VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
 
         </StackPanel>
+        <Label x:Name="labelsequenza" Content="ROSSO  BLU  VERDE" HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="172" FontSize="18" Background="Red" Foreground="White"/>
     </Grid>
 </UserControl>

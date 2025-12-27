@@ -42,6 +42,19 @@ namespace ProgettoVisualstudio
             if (cont == 3)
             {
                 MessageBox.Show("hai vinto il Livello 2");
+
+                // 1. Cerchiamo la finestra principale (MainWindow)
+                var finestraPrincipale = Window.GetWindow(this) as MainWindow;
+
+                if (finestraPrincipale != null)
+                {
+                    // 2. Nascondiamo la Grid del livello 2
+                    finestraPrincipale.livello2.Visibility = Visibility.Hidden;
+
+                    // 3. Rendiamo visibile la Grid del livello 3
+                    finestraPrincipale.livello3.Visibility = Visibility.Visible;
+                }
+
             }
         }
     }

@@ -45,5 +45,10 @@ namespace ProgettoVisualstudio
             Registrazione finestra = new Registrazione();
             finestra.Show();
         }
+
+        private void Livello3_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

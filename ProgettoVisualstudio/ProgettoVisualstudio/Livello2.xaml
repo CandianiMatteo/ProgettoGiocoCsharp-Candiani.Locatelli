@@ -14,9 +14,9 @@
                 Content=""
                 Width="120"
                 Height="120"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FocusVisualStyle="{x:Null}" Click="button_livello2_Click">
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FocusVisualStyle="{x:Null}" Click="button_livello2_Click" Margin="244,36,0,0">
 
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -74,6 +74,8 @@
             </Button.Template>
 
         </Button>
+        <Label Content="Due sono pochi,&#xA;quattro sono troppi.&#xA;Sono il minimo necessario&#xA;perché una figura stia in piedi&#xA;e una scelta abbia senso.&#xA;&#xA;Chi sono?" HorizontalAlignment="Left" Height="141" Margin="37,36,0,0" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="textboxcontatore" HorizontalAlignment="Left" Height="45" Margin="37,162,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="136"/>
 
     </Grid>
 </UserControl>

@@ -20,28 +20,31 @@ namespace ProgettoVisualstudio
     /// </summary>
     public partial class Livello2 : UserControl
     {
+        //variabile numero click
         int cont = 0;
-
 
         public Livello2()
         {
             InitializeComponent();
+            // Questa riga impedisce di scrivere con la tastiera (cercato online)
+            textboxcontatore.IsReadOnly = true;
         }
 
         private void button_livello2_Click(object sender, RoutedEventArgs e)
         {
-            //cont++;
+            
+            cont++;
 
-            //if (cont == 3)
-            //{
-            //    livello3.Visibility = Visibility.Visible;
-            //}
+            //scrittura nel textbox del numero di premute
+            textboxcontatore.Text = cont.ToString();
 
-            //if (cont > 3)
-            //{
-            //    cont = 0;
-            //}
-
+            //se sono 3 vinco
+            if (cont == 3)
+            {
+                MessageBox.Show("hai vinto il Livello 2");
+            }
         }
     }
 }
+
+

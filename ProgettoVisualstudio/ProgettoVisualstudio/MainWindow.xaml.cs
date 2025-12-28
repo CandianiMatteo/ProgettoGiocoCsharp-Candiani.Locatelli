@@ -30,6 +30,7 @@ namespace ProgettoVisualstudio
             livello4.Visibility = Visibility.Hidden;
             //livello5.Visibility = Visibility.Hidden;
             livello7.Visibility = Visibility.Hidden;
+            livello8.Visibility = Visibility.Hidden;
 
         }
 

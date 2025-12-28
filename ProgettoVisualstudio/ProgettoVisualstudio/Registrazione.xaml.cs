@@ -31,6 +31,7 @@ namespace ProgettoVisualstudio
         {
             String nomeFile = "Utenti.csv";
             StreamWriter reader;
+            
 
             try {
                 reader = new StreamWriter(nomeFile, true);

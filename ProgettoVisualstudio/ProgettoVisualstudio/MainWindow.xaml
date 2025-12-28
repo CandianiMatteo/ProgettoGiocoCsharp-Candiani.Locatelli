@@ -72,24 +72,84 @@
         <Grid Margin="27,22,746,484" x:Name="livello2">
             <local:Livello2 HorizontalAlignment="Left" Margin="27,0,0,0" VerticalAlignment="Center" Loaded="Livello2_Loaded" Height="219"/>
         </Grid>
-        <Button x:Name="buttone_registrazione" Content="Registrazione"
+        <Button x:Name="buttone_registrazione"
+        Content="Registrazione"
+        Width="180"
+        Height="60"
+        Margin="980,677,0,0"
         HorizontalAlignment="Left"
-        Margin="1014,657,0,0"
         VerticalAlignment="Top"
-        Height="80"
-        Width="146"
-        Click="ApriRegistrazione_Click"/>
+        Click="ApriRegistrazione_Click">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+
+                        <!-- Ombra -->
+                        <Border CornerRadius="15"
+                        Background="#303030"
+                        Margin="0,4,0,0">
+                            <Border.Effect>
+                                <DropShadowEffect Color="Black"
+                                          BlurRadius="12"
+                                          ShadowDepth="4"
+                                          Opacity="0.5"/>
+                            </Border.Effect>
+                        </Border>
+
+                        <!-- Corpo del pulsante -->
+                        <Border x:Name="btn"
+                        CornerRadius="15"
+                        Background="#FF4CAF50"
+                        BorderBrush="#2E7D32"
+                        BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      TextBlock.FontSize="20"
+                                      TextBlock.FontWeight="Bold"
+                                      TextBlock.Foreground="White"/>
+                        </Border>
+
+                    </Grid>
+
+                    <!-- Effetti -->
+                    <ControlTemplate.Triggers>
+
+                        <!-- Hover -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="btn" Property="Background" Value="#FF66BB6A"/>
+                        </Trigger>
+
+                        <!-- Pressione -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="btn" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform Y="3"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="btn" Property="Opacity" Value="0.9"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
         <Grid x:Name="livello3" Margin="750,10,40,519" >
             <local:Livello3  HorizontalAlignment="Left" Height="220" Margin="0,25,0,0" VerticalAlignment="Top" Width="400"  Loaded="Livello3_Loaded"/>
         </Grid>
         <local:Livello2 HorizontalAlignment="Left" Margin="1533,306,0,0" VerticalAlignment="Top"/>
 
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="1799,265,0,0" VerticalAlignment="Top"/>
-        <Grid x:Name="livello4" HorizontalAlignment="Left" Height="319" Margin="726,306,0,0" VerticalAlignment="Top" Width="458">
+        <Grid x:Name="livello4" HorizontalAlignment="Left" Height="215" Margin="904,270,0,0" VerticalAlignment="Top" Width="256">
             <local:Livello4 HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
         <Grid x:Name="livello7" HorizontalAlignment="Left" Height="271" Margin="27,466,0,0" VerticalAlignment="Top" Width="457">
             <local:Livello7 HorizontalAlignment="Center" VerticalAlignment="Center" Height="210" Width="437"/>
+        </Grid>
+        <Grid x:Name="livello8" Margin="436,40,455,504">
+            <local:Livello8 HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
 
 

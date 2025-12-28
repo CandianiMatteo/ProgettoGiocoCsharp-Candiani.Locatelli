@@ -60,7 +60,7 @@ namespace ProgettoVisualstudio
             else
             {
                 //sconfitta
-                MessageBox.Show("fallito hai sbagliato,riprova.");
+                MessageBox.Show("fallito hai sbagliato,riprova");
 
                 primoPremuto = false;
                 cronometro.Reset();

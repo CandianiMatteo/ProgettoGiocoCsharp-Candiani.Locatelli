@@ -9,8 +9,7 @@
     <Grid>
         <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Margin="0">
+                VerticalAlignment="Center" Height="213">
 
             <Button x:Name="BOTTONE1" Content="A"
                 Width="100"
@@ -76,6 +75,7 @@
             </Button>
 
         </StackPanel>
-        <Label x:Name="labelsequenza" Content="ROSSO  BLU  VERDE" HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Width="172" FontSize="18" Background="Red" Foreground="White"/>
+        <Label x:Name="labelsequenza" Content="ROSSO  BLU  VERDE" HorizontalAlignment="Left" Margin="29,41,0,0" VerticalAlignment="Top" Width="172" FontSize="18" Background="Red" Foreground="White"/>
+        <Label Content="CLICCANE 3 A CASO ;)" HorizontalAlignment="Left" Height="40" Margin="29,35,0,0" VerticalAlignment="Top" Width="291" FontSize="16"/>
     </Grid>
 </UserControl>

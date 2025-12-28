@@ -137,7 +137,7 @@
         </Button>
 
         <Grid x:Name="livello3" Margin="750,10,40,519" >
-            <local:Livello3  HorizontalAlignment="Left" Height="220" Margin="0,25,0,0" VerticalAlignment="Top" Width="400"  Loaded="Livello3_Loaded"/>
+            <local:Livello3  HorizontalAlignment="Left" Height="270" VerticalAlignment="Top" Width="400"  Loaded="Livello3_Loaded"/>
         </Grid>
         <local:Livello2 HorizontalAlignment="Left" Margin="1533,306,0,0" VerticalAlignment="Top"/>
 
@@ -150,6 +150,13 @@
         </Grid>
         <Grid x:Name="livello8" Margin="436,40,455,504">
             <local:Livello8 HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="gridlivello5" HorizontalAlignment="Left" Height="139" Margin="62,346,0,0" VerticalAlignment="Top" Width="392">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="89*"/>
+            </Grid.ColumnDefinitions>
+            <local:Livello5 HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Height="129" Width="280" Grid.ColumnSpan="2"/>
         </Grid>
 
 

@@ -22,13 +22,14 @@ namespace ProgettoVisualstudio
     /// </summary>
     public partial class MainWindow : Window
     {
+        int cont = 0;
         public MainWindow()
         {
             InitializeComponent();
             livello2.Visibility = Visibility.Hidden;
             livello3.Visibility = Visibility.Hidden;
             livello4.Visibility = Visibility.Hidden;
-            //livello5.Visibility = Visibility.Hidden;
+            gridlivello5.Visibility = Visibility.Hidden;
             livello7.Visibility = Visibility.Hidden;
             livello8.Visibility = Visibility.Hidden;
 
@@ -40,7 +41,15 @@ namespace ProgettoVisualstudio
         }
         private void button_start_Click_1(object sender, RoutedEventArgs e)
         {
+            if (cont == 0)
+            {
+                cont = cont + 1;
                 livello2.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("ei... nessuno ti ha detto di ricliccare ;( ");
+            }
         }
 
 

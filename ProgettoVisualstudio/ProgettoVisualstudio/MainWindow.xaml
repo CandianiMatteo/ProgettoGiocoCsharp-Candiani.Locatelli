@@ -158,6 +158,9 @@
             </Grid.ColumnDefinitions>
             <local:Livello5 HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Height="129" Width="280" Grid.ColumnSpan="2"/>
         </Grid>
+        <Grid x:Name="livello6" HorizontalAlignment="Left" Height="158" Margin="745,485,0,0" VerticalAlignment="Top" Width="384">
+            <local:Livello6 HorizontalAlignment="Left" Margin="-93,-27,0,0" VerticalAlignment="Top"/>
+        </Grid>
 
 
 

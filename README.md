@@ -100,26 +100,34 @@ Il livello si resetta
 Se vengono premuti abbastanza vicini
 Il livello è completato
 
-LIVELLO 6 – La cella fantasma
+LIVELLO 6 – Pannello di controllo
 
-Obiettivo  
-Trovare la cella nascosta
+Obiettivo
+Trovare la configurazione corretta del pannello
 
-Schermata  
-Griglia 3x3
+Schermata
+Tre CheckBox
+Un bottone “Verifica”
 
 Regole
 
-Una sola cella è quella corretta
+Le CheckBox possono essere attivate o disattivate liberamente
 
-Ogni click sbagliato mostra un indizio:
-“Freddo”, “Tiepido”, “Caldo”, “Bollente”
+Solo una combinazione è corretta
 
-Gli indizi dipendono dalla distanza dalla cella corretta
+Premendo “Verifica” il gioco risponde con un indizio
 
-Quando viene cliccata la cella giusta
-Il livello è superato
+Se nessuna impostazione è corretta
+Viene mostrato “Freddo”
 
+Se una sola impostazione è corretta
+Viene mostrato “Tiepido”
+
+Se due impostazioni sono corrette
+Viene mostrato “Caldo”
+
+Se tutte le impostazioni sono corrette
+Il livello è completato
 LIVELLO 7 – Indovinello + azione
 
 Obiettivo  

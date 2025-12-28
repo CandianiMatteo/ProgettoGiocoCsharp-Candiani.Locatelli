@@ -12,18 +12,20 @@ namespace ProgettoVisualstudio
         // Se la tua label dice ROSSO BLU VERDE, l'ordine deve essere A, B, C
         List<string> ordineGiusto = new List<string> { "A", "B", "C" };
         List<string> ordineGiocatore = new List<string>();
+        //timer per gestire consigliato ia per vedere messaggio sopra i bottni 1 sec
         DispatcherTimer timer;
 
         public Livello3()
         {
             InitializeComponent();
+            //sempre timer
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
             MostraAiuto();
         }
 
-        // Deve essere PUBLIC così la MainWindow può chiamarlo
+        // Deve essere public così la MainWindow può chiamarlo
         public void MostraAiuto()
         {
             ordineGiocatore.Clear();
@@ -53,10 +55,10 @@ namespace ProgettoVisualstudio
                 MessageBox.Show("Livello 3 Superato");
 
                 //non andava aiuti ia
-                MainWindow main = (MainWindow)Application.Current.MainWindow;
+                MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
 
-                main.livello3.Visibility = Visibility.Hidden;
-                main.Livello4.Visibility = Visibility.Visible;
+                finestraPrincipale.livello3.Visibility = Visibility.Hidden;
+                finestraPrincipale.Livello4.Visibility = Visibility.Visible;
             }
         }
 

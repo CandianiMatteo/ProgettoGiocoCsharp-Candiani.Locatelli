@@ -33,9 +33,13 @@ namespace ProgettoVisualstudio
                 bottone7, bottone8, bottone9
             };
 
-            //reset colore
+            //foreach che scorre tutti e mette elementi rossi
             foreach (Button b in tutti)
                 CambiaColore(b, Colors.Red);
+
+            //forza aggiornamento UI consiglio ai pk non andva
+            await Task.Delay(50);
+
 
             //scelgo 3 bottoni a caso
             while (bottoniCorretti.Count < 3)
@@ -69,8 +73,9 @@ namespace ProgettoVisualstudio
                 {
                     MessageBox.Show("Livello 4 completato!");
 
-                    MainWindow main = (MainWindow)Application.Current.MainWindow;
-                    main.Livello4.Visibility = Visibility.Hidden;
+                    MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
+                    finestraPrincipale.Livello4.Visibility = Visibility.Hidden;
+                    
                 }
             }
             else

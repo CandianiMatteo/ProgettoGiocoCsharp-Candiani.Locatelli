@@ -48,10 +48,10 @@ namespace ProgettoVisualstudio
 
                 if (finestraPrincipale != null)
                 {
-                    // 2. Nascondiamo la Grid del livello 2
+                    
                     finestraPrincipale.livello2.Visibility = Visibility.Hidden;
 
-                    // 3. Rendiamo visibile la Grid del livello 3
+                  
                     finestraPrincipale.livello3.Visibility = Visibility.Visible;
                 }
 

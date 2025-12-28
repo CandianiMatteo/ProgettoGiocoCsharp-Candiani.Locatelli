@@ -55,16 +55,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Livello5.xaml.cs">
+      <DependentUpon>Livello5.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Livello3.xaml.cs">
       <DependentUpon>Livello3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Livello4.xaml.cs">
       <DependentUpon>Livello4.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Livello6.xaml.cs">
+      <DependentUpon>Livello6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registrazione.xaml.cs">
       <DependentUpon>Registrazione.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utente.cs" />
+    <Page Include="Livello5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Livello2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,6 +84,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Livello4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Livello6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

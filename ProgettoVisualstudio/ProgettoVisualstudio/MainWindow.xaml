@@ -91,6 +91,9 @@
         <Grid x:Name="livello7" HorizontalAlignment="Left" Height="271" Margin="27,466,0,0" VerticalAlignment="Top" Width="457">
             <local:Livello7 HorizontalAlignment="Center" VerticalAlignment="Center" Height="210" Width="437"/>
         </Grid>
+        <Grid x:Name="gridlivello5" HorizontalAlignment="Left" Height="131" Margin="64,335,0,0" VerticalAlignment="Top" Width="368">
+            <local:Livello5 HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="512" Width="974"/>
+        </Grid>
 
 
 

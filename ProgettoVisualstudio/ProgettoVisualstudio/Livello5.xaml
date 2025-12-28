@@ -4,17 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProgettoVisualstudio"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Height="134" Width="245">
 
-    <Grid>
+    <Grid Margin="0,0,10,0">
 
-        <Grid Margin="0,0,432,225">
+        <Grid Margin="0,0,10,10">
 
             <!-- BOTTONE SINISTRA -->
             <Button x:Name="bottone1"
-                    Width="120"
-                    Height="120"
+                    Width="64"
+                    Height="60"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
                     FocusVisualStyle="{x:Null}"
@@ -70,13 +69,13 @@
 
             <!-- BOTTONE DESTRA -->
             <Button x:Name="bottone2"
-                    Width="120"
-                    Height="120"
+                    Width="73"
+                    Height="62"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
                     FocusVisualStyle="{x:Null}"
                     Click="bottone_Click"
-                    Margin="238,48,0,0">
+                    Margin="111,48,0,0">
 
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -126,6 +125,7 @@
             </Button>
 
         </Grid>
+        <Label Content="CLICCALI IL PIU VELOCEMENTE POSSIBILE" HorizontalAlignment="Left" Height="30" Margin="0,10,0,0" VerticalAlignment="Top" Width="244"/>
 
     </Grid>
 </UserControl>

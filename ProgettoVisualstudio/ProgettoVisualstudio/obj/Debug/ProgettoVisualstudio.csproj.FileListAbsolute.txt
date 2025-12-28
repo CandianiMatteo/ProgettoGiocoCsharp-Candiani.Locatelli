@@ -77,3 +77,5 @@ C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locat
 C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello7.baml
 C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello8.g.cs
 C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello8.baml
+C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello7.g.cs
+C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello7.baml

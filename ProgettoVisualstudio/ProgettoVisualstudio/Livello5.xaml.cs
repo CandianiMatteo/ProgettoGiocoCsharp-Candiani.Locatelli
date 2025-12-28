@@ -51,16 +51,16 @@ namespace ProgettoVisualstudio
             if (cronometro.ElapsedMilliseconds <= 500)
             {
                 //vittoria
-                MessageBox.Show("Livello 5 completato!");
+                MessageBox.Show("livello 5 completato!");
 
                 //come al solito recupero mainwindow pk far apparire e sparire grid 
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
-                //finestraPrincipale.livello5.Visibility = Visibility.Hidden;
+                finestraPrincipale.gridlivello5.Visibility = Visibility.Hidden;
             }
             else
             {
                 //sconfitta
-                MessageBox.Show("Troppo lento! Riprova.");
+                MessageBox.Show("fallito hai sbagliato,riprova.");
 
                 primoPremuto = false;
                 cronometro.Reset();

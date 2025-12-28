@@ -52,13 +52,13 @@ namespace ProgettoVisualstudio
             }
             else if (ordineGiocatore.Count == ordineGiusto.Count)
             {
-                MessageBox.Show("Livello 3 Superato");
+                MessageBox.Show("Livello 3 Completato!");
 
                 //non andava aiuti ia
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
 
                 finestraPrincipale.livello3.Visibility = Visibility.Hidden;
-                finestraPrincipale.Livello4.Visibility = Visibility.Visible;
+                finestraPrincipale.livello4.Visibility = Visibility.Visible;
             }
         }
 

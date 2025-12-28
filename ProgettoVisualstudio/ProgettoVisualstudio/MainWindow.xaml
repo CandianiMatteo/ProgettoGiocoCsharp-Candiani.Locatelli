@@ -69,7 +69,7 @@
 
         </Button>
         <ListBox HorizontalAlignment="Left" Height="0" Margin="566,415,0,0" VerticalAlignment="Top" Width="34" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Grid Margin="27,51,746,455" x:Name="livello2">
+        <Grid Margin="27,22,746,484" x:Name="livello2">
             <local:Livello2 HorizontalAlignment="Left" Margin="27,0,0,0" VerticalAlignment="Center" Loaded="Livello2_Loaded" Height="219"/>
         </Grid>
         <Button x:Name="buttone_registrazione" Content="Registrazione"
@@ -85,10 +85,12 @@
         <local:Livello2 HorizontalAlignment="Left" Margin="1533,306,0,0" VerticalAlignment="Top"/>
 
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="1799,265,0,0" VerticalAlignment="Top"/>
-        <Grid x:Name="Livello4" HorizontalAlignment="Left" Height="319" Margin="726,306,0,0" VerticalAlignment="Top" Width="458">
+        <Grid x:Name="livello4" HorizontalAlignment="Left" Height="319" Margin="726,306,0,0" VerticalAlignment="Top" Width="458">
             <local:Livello4 HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="gridlivello5" HorizontalAlignment="Left" Height="159" Margin="27,578,0,0" VerticalAlignment="Top" Width="297"/>
+        <Grid x:Name="livello7" HorizontalAlignment="Left" Height="271" Margin="27,466,0,0" VerticalAlignment="Top" Width="457">
+            <local:Livello7 HorizontalAlignment="Center" VerticalAlignment="Center" Height="210" Width="437"/>
+        </Grid>
 
 
 

@@ -11,12 +11,9 @@ namespace ProgettoVisualstudio
         private string username;
         private float tempoGioco;
 
-        public Utente(string username, float tempoGioco)
+        public Utente(string username)
         {
             this.username = username;
-            this.tempoGioco = tempoGioco;
         }
-
-
     }
 }

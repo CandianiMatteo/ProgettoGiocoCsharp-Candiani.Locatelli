@@ -41,7 +41,7 @@ namespace ProgettoVisualstudio
             //se sono 3 vinco
             if (cont == 3)
             {
-                MessageBox.Show("hai vinto il Livello 2");
+                MessageBox.Show("Livello 2 Completato!");
 
                 // 1. Cerchiamo la finestra principale (MainWindow)
                 var finestraPrincipale = Window.GetWindow(this) as MainWindow;

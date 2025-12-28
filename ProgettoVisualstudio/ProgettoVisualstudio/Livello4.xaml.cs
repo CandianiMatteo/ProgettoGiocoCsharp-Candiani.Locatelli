@@ -74,8 +74,8 @@ namespace ProgettoVisualstudio
                     MessageBox.Show("Livello 4 completato!");
 
                     MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
-                    finestraPrincipale.Livello4.Visibility = Visibility.Hidden;
-                    finestraPrincipale.gridlivello5.Visibility = Visibility.Hidden;
+                    finestraPrincipale.livello4.Visibility = Visibility.Hidden;
+                    //finestraPrincipale.livello5.Visibility = Visibility.Hidden;
                 }
             }
             else

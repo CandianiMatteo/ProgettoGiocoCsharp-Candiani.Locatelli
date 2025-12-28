@@ -67,3 +67,13 @@ C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatel
 C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello5.baml
 C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello6.g.cs
 C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello6.baml
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello5.g.cs
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello4.g.cs
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello6.g.cs
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello5.baml
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello4.baml
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello6.baml
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello7.g.cs
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello7.baml
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello8.g.cs
+C:\Users\locat\OneDrive\Desktop\Progetto25-26\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello8.baml

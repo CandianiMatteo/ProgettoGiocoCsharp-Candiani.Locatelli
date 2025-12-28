@@ -20,6 +20,8 @@ namespace ProgettoVisualstudio
     /// </summary>
     public partial class Registrazione : Window
     {
+        List<string> utenti = new List<string>();
+
         public Registrazione()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace ProgettoVisualstudio
                 reader = new StreamWriter(nomeFile, true);
 
                 reader.WriteLine(txtNomeUtente.Text);
+                utenti.Add(txtNomeUtente.Text);
                 MessageBox.Show("Utente salvato con successo");
                 reader.Close();
             }

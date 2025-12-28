@@ -61,3 +61,5 @@ C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatel
 C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\ProgettoVisualstudio.csproj.CoreCompileInputs.cache
 C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\ProgettoVisualstudio.exe
 C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\ProgettoVisualstudio.pdb
+C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello4.g.cs
+C:\Users\Amministratore\Desktop\csharpgioco\ProgettoGiocoCsharp-Candiani.Locatelli\ProgettoVisualstudio\ProgettoVisualstudio\obj\Debug\Livello4.baml

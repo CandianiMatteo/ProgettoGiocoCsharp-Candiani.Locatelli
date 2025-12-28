@@ -27,7 +27,7 @@ namespace ProgettoVisualstudio
             InitializeComponent();
             livello2.Visibility = Visibility.Hidden;
             livello3.Visibility = Visibility.Hidden;
-
+            Livello4.Visibility = Visibility.Hidden;
 
         }
 
@@ -51,5 +51,7 @@ namespace ProgettoVisualstudio
         {
 
         }
+
+       
     }
 }

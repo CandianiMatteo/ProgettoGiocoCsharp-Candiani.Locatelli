@@ -70,7 +70,7 @@ Regole
 
 Tre celle casuali si colorano per un secondo
 
-Dopo il lampeggio, tutte tornano normali
+Dopo, tutte tornano normali
 
 Devono essere cliccate solo le tre celle che si erano colorate
 

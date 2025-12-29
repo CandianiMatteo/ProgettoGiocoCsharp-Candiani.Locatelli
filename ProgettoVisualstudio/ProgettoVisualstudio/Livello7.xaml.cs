@@ -33,7 +33,7 @@ namespace ProgettoVisualstudio
                 MessageBox.Show("Livello 7 Superato");
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
                 finestraPrincipale.livello7.Visibility = Visibility.Hidden;
-                // Qui puoi aggiungere la logica per mostrare il livello successivo
+                finestraPrincipale.livello8.Visibility = Visibility.Visible;
             }
             else
             {

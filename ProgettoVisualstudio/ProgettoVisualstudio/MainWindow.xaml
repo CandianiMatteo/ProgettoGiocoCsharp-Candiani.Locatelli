@@ -148,18 +148,18 @@
         <Grid x:Name="livello7" HorizontalAlignment="Left" Height="271" Margin="27,466,0,0" VerticalAlignment="Top" Width="457">
             <local:Livello7 HorizontalAlignment="Center" VerticalAlignment="Center" Height="210" Width="437"/>
         </Grid>
-        <Grid x:Name="livello8" Margin="436,40,455,504">
+        <Grid x:Name="livello8" Margin="408,22,428,406">
             <local:Livello8 HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
-        <Grid x:Name="gridlivello5" HorizontalAlignment="Left" Height="139" Margin="62,346,0,0" VerticalAlignment="Top" Width="392">
+        <Grid x:Name="livello5" HorizontalAlignment="Left" Height="139" Margin="62,346,0,0" VerticalAlignment="Top" Width="392">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="9*"/>
                 <ColumnDefinition Width="89*"/>
             </Grid.ColumnDefinitions>
             <local:Livello5 HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Height="129" Width="280" Grid.ColumnSpan="2"/>
         </Grid>
-        <Grid x:Name="livello6" HorizontalAlignment="Left" Height="158" Margin="745,485,0,0" VerticalAlignment="Top" Width="384">
-            <local:Livello6 HorizontalAlignment="Left" Margin="-93,-27,0,0" VerticalAlignment="Top"/>
+        <Grid x:Name="livello6" HorizontalAlignment="Left" Height="158" Margin="806,490,0,0" VerticalAlignment="Top" Width="384">
+            <local:Livello6 HorizontalAlignment="Left" VerticalAlignment="Top" Height="180" Width="342" Margin="-20,0,0,0"/>
         </Grid>
 
 

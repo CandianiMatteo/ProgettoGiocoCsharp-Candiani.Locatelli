@@ -55,7 +55,7 @@ namespace ProgettoVisualstudio
 
                 //come al solito recupero mainwindow pk far apparire e sparire grid 
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
-                finestraPrincipale.gridlivello5.Visibility = Visibility.Hidden;
+                finestraPrincipale.livello5.Visibility = Visibility.Hidden;
                 finestraPrincipale.livello6.Visibility = Visibility.Visible;
             }
             else

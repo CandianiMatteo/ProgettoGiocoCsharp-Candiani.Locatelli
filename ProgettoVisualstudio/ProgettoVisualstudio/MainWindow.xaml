@@ -148,7 +148,7 @@
         <Grid x:Name="livello7" HorizontalAlignment="Left" Height="271" Margin="27,466,0,0" VerticalAlignment="Top" Width="457">
             <local:Livello7 HorizontalAlignment="Center" VerticalAlignment="Center" Height="210" Width="437"/>
         </Grid>
-        <Grid x:Name="livello8" Margin="408,22,428,406">
+        <Grid x:Name="livello8" Margin="401,-56,435,443">
             <local:Livello8 HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
         <Grid x:Name="livello5" HorizontalAlignment="Left" Height="139" Margin="62,346,0,0" VerticalAlignment="Top" Width="392">
@@ -159,7 +159,19 @@
             <local:Livello5 HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Height="129" Width="280" Grid.ColumnSpan="2"/>
         </Grid>
         <Grid x:Name="livello6" HorizontalAlignment="Left" Height="158" Margin="806,490,0,0" VerticalAlignment="Top" Width="384">
-            <local:Livello6 HorizontalAlignment="Left" VerticalAlignment="Top" Height="180" Width="342" Margin="-20,0,0,0"/>
+            <local:Livello6 HorizontalAlignment="Left" VerticalAlignment="Center" Height="180" Width="342" Margin="68,0,0,0"/>
+        </Grid>
+        <Grid x:Name="livello9" Margin="630,300,270,215">
+            <local:Livello9 HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="328">
+                <local:Livello9.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0"/>
+                    </TransformGroup>
+                </local:Livello9.RenderTransform>
+            </local:Livello9>
         </Grid>
 
 

@@ -83,6 +83,7 @@ namespace ProgettoVisualstudio
 
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
                 finestraPrincipale.livello8.Visibility = Visibility.Hidden;
+                finestraPrincipale.livello9.Visibility = Visibility.Visible;
             }
         }
 

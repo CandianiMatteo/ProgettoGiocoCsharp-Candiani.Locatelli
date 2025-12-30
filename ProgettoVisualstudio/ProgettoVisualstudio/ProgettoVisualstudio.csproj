@@ -73,6 +73,9 @@
     <Compile Include="Livello8.xaml.cs">
       <DependentUpon>Livello8.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Livello9.xaml.cs">
+      <DependentUpon>Livello9.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registrazione.xaml.cs">
       <DependentUpon>Registrazione.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Livello8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Livello9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

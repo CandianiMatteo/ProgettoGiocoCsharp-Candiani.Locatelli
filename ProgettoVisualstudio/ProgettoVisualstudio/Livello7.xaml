@@ -16,13 +16,16 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Label x:Name="indovinello"
-               Grid.Row="1"
-               Content="Cosa aumenta più viene tolto?"
-               HorizontalAlignment="Center"
+        <Label Grid.Row="1"
+       HorizontalAlignment="Center"
+       Margin="0,0,0,20">
+            <TextBlock Text="Ho un'infinita memoria ma non ricordo nulla. Posso essere veloce ma anche lento. Cosa sono?"
                FontSize="24"
                FontWeight="Bold"
-               Margin="0,0,0,20"/>
+               TextWrapping="Wrap"
+               Width="400"
+               TextAlignment="Center"/>
+        </Label>
 
         <TextBox x:Name="txtRisposta"
                  Grid.Row="2"

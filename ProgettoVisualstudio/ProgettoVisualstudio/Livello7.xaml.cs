@@ -28,7 +28,7 @@ namespace ProgettoVisualstudio
 
         private void btnConferma_Click(object sender, RoutedEventArgs e)
         {
-            if (txtRisposta.Text == "Buco" || txtRisposta.Text == "buco")
+            if (txtRisposta.Text == "Hard Disk" || txtRisposta.Text == "hard disk" || txtRisposta.Text == "SSD" || txtRisposta.Text == "ssd")
             {
                 MessageBox.Show("Livello 7 Superato");
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;

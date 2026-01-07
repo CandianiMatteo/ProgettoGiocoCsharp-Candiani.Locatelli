@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading; //per timer
 
 namespace ProgettoVisualstudio
 {
@@ -23,16 +24,24 @@ namespace ProgettoVisualstudio
         //variabile numero click
         int cont = 0;
 
+        DispatcherTimer timerAttesa;      //aggiunta timer
+        int secondiPassati = 0;           //tiene conto dei secondi
+
         public Livello2()
         {
             InitializeComponent();
-            // Questa riga impedisce di scrivere con la tastiera (cercato online)
+            //questa riga impedisce di scrivere con la tastiera (cercato online)
             textboxcontatore.IsReadOnly = true;
+
+
+            //impostazioni base timer
+            timerAttesa = new DispatcherTimer();            
+            timerAttesa.Interval = TimeSpan.FromSeconds(1); 
+            timerAttesa.Tick += TimerAttesa_Tick;           
         }
 
         private void button_livello2_Click(object sender, RoutedEventArgs e)
         {
-            
             cont++;
 
             //scrittura nel textbox del numero di premute
@@ -41,6 +50,29 @@ namespace ProgettoVisualstudio
             //se sono 3 vinco
             if (cont == 3)
             {
+                secondiPassati = 0;        //reset secondi
+                timerAttesa.Start();       //start timer
+            }
+            else
+            {
+                timerAttesa.Stop();        
+            }
+        }
+
+        private void TimerAttesa_Tick(object sender, EventArgs e)
+        {
+            if (cont != 3)
+            {
+                timerAttesa.Stop();        //SE NON È PIÙ 3, STOP (corretto ai)
+                return;
+            }
+
+            secondiPassati++;//1 secondo        
+
+            if (secondiPassati == 3) //3 secondi vinto      
+            {
+                timerAttesa.Stop();
+
                 MessageBox.Show("Livello 2 Completato!");
 
                 // 1. Cerchiamo la finestra principale (MainWindow)
@@ -48,16 +80,10 @@ namespace ProgettoVisualstudio
 
                 if (finestraPrincipale != null)
                 {
-                    
                     finestraPrincipale.livello2.Visibility = Visibility.Hidden;
-
-                  
                     finestraPrincipale.livello3.Visibility = Visibility.Visible;
                 }
-
             }
         }
     }
 }
-
-

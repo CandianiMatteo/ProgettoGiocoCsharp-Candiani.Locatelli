@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:ProgettoVisualstudio"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Margin="0,0,10,27">
+    <Grid Margin="0,0,-152,-26">
         <Button x:Name="bottone1"
             Content=""
             Width="52"
@@ -556,6 +556,7 @@
             </Button.Template>
 
         </Button>
+        <Button x:Name="Bottonepartenza" Content="AVVIA" HorizontalAlignment="Left" Height="30" Margin="35,184,0,0" VerticalAlignment="Top" Width="156" Click="Bottonepartenza_Click"/>
 
     </Grid>
 </UserControl>

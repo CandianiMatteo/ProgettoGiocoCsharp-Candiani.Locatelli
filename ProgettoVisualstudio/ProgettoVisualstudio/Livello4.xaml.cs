@@ -17,9 +17,15 @@ namespace ProgettoVisualstudio
         public Livello4()
         {
             InitializeComponent();
+            
+        }
+
+        private void Bottonepartenza_Click(object sender, RoutedEventArgs e)
+        {
             AvviaLivello();
         }
 
+        //async consigliato da copilot per non aspettare se trovo operazoni lunghe ma continuare il codice
         async void AvviaLivello()
         {
             clickCorretti = 0;
@@ -93,5 +99,7 @@ namespace ProgettoVisualstudio
             if (ellisse != null)
                 ellisse.Fill = new SolidColorBrush(colore);
         }
+
+        
     }
 }

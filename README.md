@@ -66,16 +66,16 @@ L’obiettivo non è “vincere”, ma **scoprire**: trovare soluzioni, provare 
 ---
 
 ## **LIVELLO 6 – Pannello di controllo**
-**Obiettivo:** trovare la configurazione corretta  
-**Schermata:** tre **CheckBox** + bottone **Verifica**  
+
+**Obiettivo:** trovare la configurazione corretta del pannello
+**Schermata:**  
+- Sei **CheckBox**  
+- Una **Progress Bar**  
 **Regole:**
-- Le CheckBox possono essere attivate/disattivate liberamente  
-- Solo una combinazione è corretta  
-- Premendo “Verifica” il gioco dà un indizio:
-  - Nessuna corretta → **Freddo**  
-  - Una corretta → **Tiepido**  
-  - Due corrette → **Caldo**  
-  - Tre corrette → livello completato  
+- Le sei CheckBox possono essere attivate o disattivate liberamente.
+- La **Progress Bar** aumenta o diminuisce in base a quanto ci si avvicina alla soluzione.
+- Esiste **una sola combinazione corretta** di CheckBox.
+- Il giocatore deve interpretare gli indizi e osservare la Progress Bar per capire se si sta avvicinando alla soluzione.
 
 ---
 
@@ -130,11 +130,3 @@ Vengono mostrati:
 
 ---
 
-Se vuoi, posso:
-
-✨ trasformare tutto in un **README.md completo**  
-✨ aggiungere **grafica concettuale** (ASCII, mockup testuali)  
-✨ proporre **nuovi livelli**, twist narrativi o finali alternativi  
-✨ suggerire **meccaniche segrete** o easter egg  
-
-Dimmi tu come vuoi procedere!

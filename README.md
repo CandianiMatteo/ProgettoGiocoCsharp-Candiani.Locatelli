@@ -1,208 +1,140 @@
-Questo gioco è un’esperienza narrativa/puzzle in cui il giocatore si trova di fronte a un pannello di controllo (o scenario simile) e può interagire con elementi visivi e meccaniche semplici. Ogni scelta o azione altera lo stato del mondo di gioco e può portare a differenti risultati — alcuni ovvi, altri sorprendentemente strani — incoraggiando l’esplorazione, la curiosità e la sperimentazione. Non ci sono istruzioni esplicitamente dettagliate: parte del divertimento sta nel osservare le conseguenze di ogni azione e nel capire da soli come “funziona” il gioco. L’obiettivo non è “vincere” nel senso tradizionale, ma piuttosto scoprire i vari esiti, sperimentare diverse combinazioni e godersi le sorprese. In sintesi: un’esperienza breve ma densa, che premia il ragionamento, l’osservazione e la fantasia del giocatore.
-
-PRIMA STESURA GIOCO:
-
-LIVELLO 1 – Il primo click
-
-Obiettivo  
-Cliccare il bottone centrale
-
-Schermata  
-Un bottone grande al centro
-
-Regole
-
-Qualsiasi click porta alla vittoria
-
-Non ci sono timer
-
-Non è possibile sbagliare
-
-LIVELLO 2 – Numero corretto
-
-Obiettivo  
-Cliccare il bottone esattamente 3 volte
-
-Schermata  
-Bottone con contatore visibile
-
-Regole
-
-Ogni click aumenta il contatore
-
-Al terzo click esatto il livello è completato
-
-Se si clicca più di tre volte
-Il contatore si resetta
-
-LIVELLO 3 – Premere nell’ordine giusto i bottoni
-
-Obiettivo  
-Premere i bottoni seguendo l’ordine indicato
-
-Schermata  
-Tre bottoni etichettati A – B – C
-
-Regole
-
-All’inizio del livello il gioco mostra la sequenza per 1 secondo
-(esempio: A → C → B)
-
-Dopo la visualizzazione, i bottoni tornano normali
-
-Il giocatore deve premere i bottoni nell’ordine mostrato
-
-Se si sbaglia ordine
-Il livello si resetta
-
-Se la sequenza è completata correttamente
-Il livello è superato
-
-LIVELLO 4 – Caccia al colore
-
-Obiettivo  
-Cliccare le celle che cambiano colore
-
-Schermata  
-Griglia 3x3
-
-Regole
-
-Tre celle casuali si colorano per un secondo
-
-Dopo, tutte tornano normali
-
-Devono essere cliccate solo le tre celle che si erano colorate
-
-L’ordine non importa
-
-Se si clicca una cella sbagliata
-Il livello si resetta
-
-Dopo aver cliccato tutte e tre le celle corrette
-Il livello è completato
-
-LIVELLO 5 – Doppio click sincronizzato
-
-Obiettivo  
-Premere due bottoni quasi contemporaneamente
-
-Schermata  
-Due bottoni: uno a sinistra e uno a destra
-
-Regole
-
-I due bottoni devono essere cliccati entro mezzo secondo l’uno dall’altro
-
-Se il tempo tra i due click è troppo lungo
-Il livello si resetta
-
-Se vengono premuti abbastanza vicini
-Il livello è completato
-
-LIVELLO 6 – Pannello di controllo
-
-Obiettivo
-Trovare la configurazione corretta del pannello
-
-Schermata
-Tre CheckBox
-Un bottone “Verifica”
-
-Regole
-
-Le CheckBox possono essere attivate o disattivate liberamente
-
-Solo una combinazione è corretta
-
-Premendo “Verifica” il gioco risponde con un indizio
-
-Se nessuna impostazione è corretta
-Viene mostrato “Freddo”
-
-Se una sola impostazione è corretta
-Viene mostrato “Tiepido”
-
-Se due impostazioni sono corrette
-Viene mostrato “Caldo”
-
-Se tutte le impostazioni sono corrette
-Il livello è completato
-LIVELLO 7 – Indovinello + azione
-
-Obiettivo  
-Risolvere un indovinello e fare l’azione richiesta
-
-Indovinello  
-“Cosa aumenta più viene tolto?”
-Risposta: buco
-
-Regole
-
-Inserire la risposta corretta
-
-La griglia si sblocca
-
-Va cliccata la cella centrale
-
-LIVELLO 8 – Trappole invisibili
-
-Obiettivo  
-Evitare le celle sbagliate
-
-Schermata  
-Griglia 4x4
-
-Regole
-
-Tre celle sono trappole
-
-Se una trappola viene cliccata
-Il livello si resetta
-
-Devono essere cliccate tutte le celle sicure
-
-LIVELLO 9 – Percorso continuo
-
-Obiettivo  
-Cliccare cinque celle adiacenti formando un percorso
-
-Schermata  
-Griglia 3x3
-
-Regole
-
-Ogni cella cliccata deve essere adiacente alla precedente
-(orizzontale, verticale o diagonale)
-
-Non si può cliccare due volte la stessa cella
-
-Se si clicca una cella non adiacente
-Il percorso si annulla
-
-Dopo cinque celle valide
-Il livello è completato
-
-LIVELLO 10 – Prova finale
-
-Obiettivo  
-Completare più azioni in sequenza
-
-Regole
-
-Attendere 3 secondi
-
-Risolvere un indovinello
-
-Ripetere una sequenza
-
-Accendere tutte le celle della griglia
-
-FINE GIOCO
-Messaggio finale: “Hai superato tutte le prove.”
+# 🎮 **Concept del Gioco**
+
+Un’esperienza narrativa/puzzle basata sull’interazione con un pannello di controllo minimale.  
+Il giocatore non riceve istruzioni dettagliate: deve osservare, sperimentare e dedurre le regole di ogni livello.  
+Ogni azione modifica lo stato del mondo di gioco e può generare risultati inattesi, incoraggiando curiosità e tentativi.
+
+L’obiettivo non è “vincere”, ma **scoprire**: trovare soluzioni, provare combinazioni, godersi gli imprevisti.
+
+---
+
+# 🧩 **Struttura dei Livelli**
+
+## **LIVELLO 1 – Il primo click**
+**Obiettivo:** cliccare il bottone centrale  
+**Schermata:** un grande bottone al centro  
+**Regole:**
+- Qualsiasi click completa il livello  
+- Nessun timer  
+- Non è possibile fallire  
+
+---
+
+## **LIVELLO 2 – Numero corretto**
+**Obiettivo:** cliccare il bottone esattamente **3 volte**  
+**Schermata:** bottone con contatore visibile  
+**Regole:**
+- Ogni click incrementa il contatore  
+- Al terzo click esatto → livello completato  
+- Se si supera il 3 → contatore si resetta  
+
+---
+
+## **LIVELLO 3 – Sequenza corretta**
+**Obiettivo:** premere i bottoni nell’ordine mostrato  
+**Schermata:** tre bottoni etichettati **A – B – C**  
+**Regole:**
+- All’inizio viene mostrata una sequenza per 1 secondo (es. A → C → B)  
+- Poi i bottoni tornano normali  
+- Il giocatore deve ripetere la sequenza  
+- Errore → reset del livello  
+- Sequenza corretta → livello superato  
+
+---
+
+## **LIVELLO 4 – Caccia al colore**
+**Obiettivo:** cliccare le celle che cambiano colore  
+**Schermata:** griglia **3×3**  
+**Regole:**
+- Tre celle casuali si colorano per 1 secondo  
+- Poi tornano normali  
+- Il giocatore deve cliccare solo quelle tre  
+- L’ordine non conta  
+- Cella sbagliata → reset  
+- Tutte e tre corrette → livello completato  
+
+---
+
+## **LIVELLO 5 – Doppio click sincronizzato**
+**Obiettivo:** premere due bottoni quasi contemporaneamente  
+**Schermata:** due bottoni (sinistra e destra)  
+**Regole:**
+- I due click devono avvenire entro **0,5 secondi**  
+- Se troppo distanti → reset  
+- Se abbastanza vicini → livello completato  
+
+---
+
+## **LIVELLO 6 – Pannello di controllo**
+**Obiettivo:** trovare la configurazione corretta  
+**Schermata:** tre **CheckBox** + bottone **Verifica**  
+**Regole:**
+- Le CheckBox possono essere attivate/disattivate liberamente  
+- Solo una combinazione è corretta  
+- Premendo “Verifica” il gioco dà un indizio:
+  - Nessuna corretta → **Freddo**  
+  - Una corretta → **Tiepido**  
+  - Due corrette → **Caldo**  
+  - Tre corrette → livello completato  
+
+---
+
+## **LIVELLO 7 – Indovinello + azione**
+**Obiettivo:** risolvere un indovinello e compiere un’azione  
+**Indovinello:** “Cosa aumenta più viene tolto?” → **buco**  
+**Regole:**
+- Inserire la risposta corretta  
+- Si sblocca una griglia  
+- Va cliccata la cella centrale  
+
+---
+
+## **LIVELLO 8 – Trappole invisibili**
+**Obiettivo:** evitare le celle sbagliate  
+**Schermata:** griglia **4×4**  
+**Regole:**
+- Tre celle sono trappole  
+- Se cliccate → reset  
+- Devono essere cliccate tutte le celle sicure  
+
+---
+
+## **LIVELLO 9 – Percorso continuo**
+**Obiettivo:** cliccare cinque celle adiacenti formando un percorso  
+**Schermata:** griglia **3×3**  
+**Regole:**
+- Ogni cella deve essere adiacente alla precedente (orizzontale, verticale o diagonale)  
+- Non si può cliccare due volte la stessa cella  
+- Cella non adiacente → percorso annullato  
+- Cinque celle valide → livello completato  
+
+---
+
+## **LIVELLO 10 – Prova finale**
+**Obiettivo:** completare una sequenza di azioni  
+**Regole:**
+1. Attendere 3 secondi  
+2. Risolvere un indovinello  
+3. Ripetere una sequenza  
+4. Accendere tutte le celle della griglia  
+
+---
+
+# 🏁 **Fine del gioco**
+Messaggio finale: **“Hai superato tutte le prove.”**
 
 Vengono mostrati:
+- Username  
+- Tempo di gioco  
+- Formattazione stile README  
 
-Username
+---
 
-Tempo di gioco
+Se vuoi, posso:
+
+✨ trasformare tutto in un **README.md completo**  
+✨ aggiungere **grafica concettuale** (ASCII, mockup testuali)  
+✨ proporre **nuovi livelli**, twist narrativi o finali alternativi  
+✨ suggerire **meccaniche segrete** o easter egg  
+
+Dimmi tu come vuoi procedere!

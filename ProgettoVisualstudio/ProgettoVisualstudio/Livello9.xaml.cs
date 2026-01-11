@@ -10,211 +10,163 @@ namespace ProgettoVisualstudio
 {
     public partial class Livello9 : UserControl
     {
-        private List<Tuple<int, int>> Percorso;
-        private Tuple<int, int> Partenza;
-        private Tuple<int, int> Meta;
-        private Random rnd;
+        // Lista delle celle cliccate in ordine
+        private List<Point> percorso = new List<Point>();
+
+        // Coordinate della partenza e della meta
+        private Point partenza;
+        private Point meta;
+
+        private Random rnd = new Random();
 
         public Livello9()
         {
             InitializeComponent();
 
-            rnd = new Random();
-            Percorso = new List<Tuple<int, int>>();
+            GeneraPartenzaMeta();      // Crea partenza e meta
+            CollegaClick();            // Collega i click ai rettangoli
 
-            GeneraPartenzaEMeta();
-            CollegaClick();
-
-            EvidenziaPartenza(Partenza.Item1, Partenza.Item2);
-            EvidenziaMeta(Meta.Item1, Meta.Item2);
+            Evidenzia(partenza, Brushes.LightSkyBlue); // Colore partenza
+            Evidenzia(meta, Brushes.LightGreen);       // Colore meta
         }
 
+        // Collega l'evento di click a ogni cella della griglia
         private void CollegaClick()
         {
             foreach (UIElement child in GridLivello.Children)
-            {
                 if (child is Rectangle rect)
-                    rect.MouseDown += Rect_MouseDown;
-            }
+                    rect.MouseDown += CellaCliccata;
         }
 
-        private void Rect_MouseDown(object sender, MouseButtonEventArgs e)
+        // Quando clicchi una cella, ricavo riga e colonna
+        private void CellaCliccata(object sender, MouseButtonEventArgs e)
         {
-            Rectangle rect = sender as Rectangle;
-            int r = Grid.GetRow(rect);
-            int c = Grid.GetColumn(rect);
+            Rectangle r = (Rectangle)sender;
+            int row = Grid.GetRow(r);
+            int col = Grid.GetColumn(r);
 
-            ClickCella(r, c);
+            GestisciClick(new Point(row, col));
         }
 
-        private void GeneraPartenzaEMeta()
+        // Genera una partenza e una meta semplici
+        private void GeneraPartenzaMeta()
         {
-            // Quadranti della griglia 5x5
-            List<(int r1, int r2, int c1, int c2)> quadranti = new List<(int r1, int r2, int c1, int c2)>
-            {
-                (0, 1, 0, 1), // Q1
-                (0, 1, 3, 4), // Q2
-                (3, 4, 0, 1), // Q3
-                (3, 4, 3, 4)  // Q4
-            };
+            // Partenza casuale
+            partenza = new Point(rnd.Next(0, 5), rnd.Next(0, 5));
 
-            // Scegli quadrante partenza
-            int qp = rnd.Next(0, 4);
-
-            // Quadrante opposto
-            int qm = (qp + 2) % 4;
-
-            var QP = quadranti[qp];
-            var QM = quadranti[qm];
-
-            // Genera partenza nel quadrante scelto
-            int r1 = rnd.Next(QP.r1, QP.r2 + 1);
-            int c1 = rnd.Next(QP.c1, QP.c2 + 1);
-            Partenza = new Tuple<int, int>(r1, c1);
-
-            int r2, c2;
-
-            // Genera meta nel quadrante opposto
+            // Meta casuale ma lontana almeno 4 passi (distanza Manhattan)
             do
             {
-                r2 = rnd.Next(QM.r1, QM.r2 + 1);
-                c2 = rnd.Next(QM.c1, QM.c2 + 1);
-
-                int dr = Math.Abs(r2 - r1);
-                int dc = Math.Abs(c2 - c1);
-
-                // distanza minima 4
-                if (dr + dc >= 4)
-                    break;
-
-            } while (true);
-
-            Meta = new Tuple<int, int>(r2, c2);
-        }
-
-
-        private void Reset()
-        {
-            Percorso.Clear();
-            ResetGrafica();
-            GeneraPartenzaEMeta();
-            EvidenziaPartenza(Partenza.Item1, Partenza.Item2);
-            EvidenziaMeta(Meta.Item1, Meta.Item2);
-        }
-
-        private bool SonoAdiacenti(Tuple<int, int> a, Tuple<int, int> b)
-        {
-            int dr = Math.Abs(a.Item1 - b.Item1);
-            int dc = Math.Abs(a.Item2 - b.Item2);
-
-            return dr <= 1 && dc <= 1 && !(a.Item1 == b.Item1 && a.Item2 == b.Item2);
-        }
-
-        private void ClickCella(int r, int c)
-        {
-            var cella = new Tuple<int, int>(r, c);
-
-            // 1) Prima cella deve essere la partenza
-            if (Percorso.Count == 0)
-            {
-                if (cella.Item1 != Partenza.Item1 || cella.Item2 != Partenza.Item2)
-                {
-                    Reset();
-                    return;
-                }
+                meta = new Point(rnd.Next(0, 5), rnd.Next(0, 5));
             }
+            while (Distanza(partenza, meta) < 4);
+        }
 
-            // 2) Non puoi cliccare due volte la stessa cella
-            if (Percorso.Contains(cella))
+        // Distanza Manhattan (perfetta per griglie)
+        private int Distanza(Point a, Point b)
+        {
+            return (int)(Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y));
+        }
+
+        // Logica principale del gioco
+        private void GestisciClick(Point cella)
+        {
+            // Prima cella obbligatoria: la partenza
+            if (percorso.Count == 0 && cella != partenza)
             {
                 Reset();
                 return;
             }
 
-            // 3) Se non è la prima, controlla adiacenza
-            if (Percorso.Count > 0)
+            // Non puoi cliccare due volte la stessa cella
+            if (percorso.Contains(cella))
             {
-                var ultima = Percorso[Percorso.Count - 1];
+                Reset();
+                return;
+            }
 
-                if (!SonoAdiacenti(ultima, cella))
+            // Se non è la prima, deve essere adiacente (solo verticale/orizzontale)
+            if (percorso.Count > 0)
+            {
+                Point ultima = percorso[percorso.Count - 1];
+
+                if (!Adiacenti(ultima, cella))
                 {
                     Reset();
                     return;
                 }
             }
 
-            // 4) Aggiungi cella
-            Percorso.Add(cella);
-            ColoraCella(r, c, Brushes.LightBlue);
+            // Aggiungo la cella al percorso
+            percorso.Add(cella);
+            Colora(cella, Brushes.LightBlue);
 
-            // 5) Se arrivi alla meta → livello superato
-            if (cella.Item1 == Meta.Item1 && cella.Item2 == Meta.Item2)
+            // Se arrivi alla meta → vittoria
+            if (cella == meta)
             {
                 MessageBox.Show("Livello 9 completato!");
                 return;
             }
 
-            // 6) Se arrivi a 5 celle senza meta → reset
-            if (Percorso.Count == 5)
-            {
+            // Se fai 5 passi senza arrivare → reset
+            if (percorso.Count == 5)
                 Reset();
-            }
         }
 
-        private void ColoraCella(int r, int c, Brush colore)
+        // Controllo adiacenza SOLO verticale/orizzontale
+        private bool Adiacenti(Point a, Point b)
+        {
+            // Stessa riga → movimento orizzontale
+            bool orizzontale = a.X == b.X && Math.Abs(a.Y - b.Y) == 1;
+
+            // Stessa colonna → movimento verticale
+            bool verticale = a.Y == b.Y && Math.Abs(a.X - b.X) == 1;
+
+            return orizzontale || verticale;
+        }
+
+        // Colora una cella normale
+        private void Colora(Point p, Brush colore)
         {
             foreach (UIElement child in GridLivello.Children)
-            {
                 if (child is Rectangle rect &&
-                    Grid.GetRow(rect) == r &&
-                    Grid.GetColumn(rect) == c)
+                    Grid.GetRow(rect) == (int)p.X &&
+                    Grid.GetColumn(rect) == (int)p.Y)
+                    rect.Fill = colore;
+        }
+
+        // Evidenzia partenza o meta
+        private void Evidenzia(Point p, Brush colore)
+        {
+            foreach (UIElement child in GridLivello.Children)
+                if (child is Rectangle rect &&
+                    Grid.GetRow(rect) == (int)p.X &&
+                    Grid.GetColumn(rect) == (int)p.Y)
                 {
                     rect.Fill = colore;
+                    rect.StrokeThickness = 3;
                 }
-            }
         }
 
-        private void ResetGrafica()
+        // Reset totale del livello
+        private void Reset()
         {
+            percorso.Clear();
+
+            // Ripristina grafica base
             foreach (UIElement child in GridLivello.Children)
-            {
                 if (child is Rectangle rect)
                 {
                     rect.Fill = Brushes.White;
-                    rect.Stroke = Brushes.Black;
                     rect.StrokeThickness = 1.5;
                 }
-            }
-        }
 
-        private void EvidenziaPartenza(int r, int c)
-        {
-            foreach (UIElement child in GridLivello.Children)
-            {
-                if (child is Rectangle rect &&
-                    Grid.GetRow(rect) == r &&
-                    Grid.GetColumn(rect) == c)
-                {
-                    rect.Fill = Brushes.LightSkyBlue;
-                    rect.Stroke = Brushes.DarkBlue;
-                    rect.StrokeThickness = 3;
-                }
-            }
-        }
+            // Rigenera partenza e meta
+            GeneraPartenzaMeta();
 
-        private void EvidenziaMeta(int r, int c)
-        {
-            foreach (UIElement child in GridLivello.Children)
-            {
-                if (child is Rectangle rect &&
-                    Grid.GetRow(rect) == r &&
-                    Grid.GetColumn(rect) == c)
-                {
-                    rect.Fill = Brushes.LightGreen;
-                    rect.Stroke = Brushes.DarkGreen;
-                    rect.StrokeThickness = 3;
-                }
-            }
+            // Evidenzia di nuovo
+            Evidenzia(partenza, Brushes.LightSkyBlue);
+            Evidenzia(meta, Brushes.LightGreen);
         }
     }
 }

@@ -81,7 +81,7 @@ L’obiettivo non è “vincere”, ma **scoprire**: trovare soluzioni, provare 
 
 ## **LIVELLO 7 – Indovinello + azione**
 **Obiettivo:** risolvere un indovinello e compiere un’azione  
-**Indovinello:** “Cosa aumenta più viene tolto?” → **buco**  
+**Indovinello:** “Ho un'infinita memoria ma non ricordo nulla. Posso essere veloce ma anche lento. Cosa sono?” → **Hard Disk**  
 **Regole:**
 - Inserire la risposta corretta  
 - Si sblocca una griglia  
@@ -91,19 +91,19 @@ L’obiettivo non è “vincere”, ma **scoprire**: trovare soluzioni, provare 
 
 ## **LIVELLO 8 – Trappole invisibili**
 **Obiettivo:** evitare le celle sbagliate  
-**Schermata:** griglia **4×4**  
+**Schermata:** griglia **3×3**  
 **Regole:**
 - Tre celle sono trappole  
 - Se cliccate → reset  
-- Devono essere cliccate tutte le celle sicure  
+- Devono essere cliccate almeno 3 celle sicure  
 
 ---
 
 ## **LIVELLO 9 – Percorso continuo**
 **Obiettivo:** cliccare cinque celle adiacenti formando un percorso  
-**Schermata:** griglia **3×3**  
+**Schermata:** griglia **5×5**  
 **Regole:**
-- Ogni cella deve essere adiacente alla precedente (orizzontale, verticale o diagonale)  
+- Ogni cella deve essere adiacente alla precedente (orizzontale, verticale)  
 - Non si può cliccare due volte la stessa cella  
 - Cella non adiacente → percorso annullato  
 - Cinque celle valide → livello completato  
@@ -126,7 +126,6 @@ Messaggio finale: **“Hai superato tutte le prove.”**
 Vengono mostrati:
 - Username  
 - Tempo di gioco  
-- Formattazione stile README  
 
 ---
 

@@ -34,6 +34,7 @@ namespace ProgettoVisualstudio
             livello7.Visibility = Visibility.Hidden;
             livello8.Visibility = Visibility.Hidden;
             livello9.Visibility = Visibility.Hidden;
+            gridlivello10.Visibility = Visibility.Hidden;
 
         }
 
@@ -66,6 +67,9 @@ namespace ProgettoVisualstudio
 
         }
 
-       
+        private void Livello10_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

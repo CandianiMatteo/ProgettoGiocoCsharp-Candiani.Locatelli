@@ -105,6 +105,10 @@ namespace ProgettoVisualstudio
             if (cella == meta)
             {
                 MessageBox.Show("Livello 9 completato!");
+                // RIGHE DA AGGIUNGERE QUI:
+                MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
+                finestraPrincipale.livello9.Visibility = Visibility.Hidden;
+                finestraPrincipale.gridlivello10.Visibility = Visibility.Visible;
                 return;
             }
 

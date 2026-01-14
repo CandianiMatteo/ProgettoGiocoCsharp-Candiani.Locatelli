@@ -168,6 +168,9 @@
         Width="250"
         Height="336"/>
         </Grid>
+        <Grid x:Name="gridlivello10" HorizontalAlignment="Left" Height="774" Margin="10,10,0,0" VerticalAlignment="Top" Width="1190">
+            <local:Livello10 HorizontalAlignment="Center" Height="764" VerticalAlignment="Top" Width="1190" Loaded="Livello10_Loaded" Panel.ZIndex="-1"/>
+        </Grid>
 
     </Grid>
 </Window>

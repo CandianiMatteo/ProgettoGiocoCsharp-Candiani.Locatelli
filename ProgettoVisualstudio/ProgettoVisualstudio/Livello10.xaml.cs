@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ProgettoVisualstudio
 {
@@ -20,9 +21,80 @@ namespace ProgettoVisualstudio
     /// </summary>
     public partial class Livello10 : UserControl
     {
+        // Timer per far muovere il bottone
+        DispatcherTimer timerMovimento = new DispatcherTimer();
+        Random rnd = new Random();
+        int punteggio = 0;
+
         public Livello10()
         {
             InitializeComponent();
+
+            // Configurazione del Timer: scatta ogni 1 secondo
+            timerMovimento.Interval = TimeSpan.FromSeconds(1);
+            timerMovimento.Tick += MuoviBottoneRandom;
+            timerMovimento.Start();
+        }
+
+        // Funzione che sposta il bottone in una posizione casuale nel Canvas
+        private void MuoviBottoneRandom(object sender, EventArgs e)
+        {
+            // Calcoliamo lo spazio disponibile nel Canvas
+            double limiteX = AreaGioco.ActualWidth - BtnBersaglio.ActualWidth;
+            double limiteY = AreaGioco.ActualHeight - BtnBersaglio.ActualHeight;
+
+            // Se il Canvas è stato caricato correttamente, spostiamo il bottone
+            if (limiteX > 0 && limiteY > 0)
+            {
+                double nuovaX = rnd.NextDouble() * limiteX;
+                double nuovaY = rnd.NextDouble() * limiteY;
+
+                Canvas.SetLeft(BtnBersaglio, nuovaX);
+                Canvas.SetTop(BtnBersaglio, nuovaY);
+            }
+        }
+
+        // Cosa succede quando clicchi il bottone "scappante"
+        private void BtnBersaglio_Click(object sender, RoutedEventArgs e)
+        {
+            punteggio++;
+            BarraProgresso.Value = punteggio;
+            LabelTitolo.Content = $"ACCHIAPPA IL BOTTONE! ({punteggio}/10)";
+
+            // Appena lo colpisci, si sposta subito
+            MuoviBottoneRandom(null, null);
+
+            // Controllo vittoria
+            if (punteggio >= 10)
+            {
+                Vittoria();
+            }
+        }
+
+        private void Vittoria()
+        {
+            timerMovimento.Stop(); // Ferma il timer
+            BtnBersaglio.Visibility = Visibility.Collapsed; // Nasconde il bottone che scappa
+            AreaGioco.Visibility = Visibility.Collapsed; // Nasconde l'area di gioco
+
+            BTNFINE.Visibility = Visibility.Visible; // Mostra il bottone finale
+            LabelTitolo.Content = "LIVELLO COMPLETATO!";
+        }
+
+        // Bottone finale per chiudere il gioco
+        private void BTNFINE_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Complimenti! Hai superato tutte le prove del sistema.");
+            Application.Current.Shutdown();
+        }
+
+        private void BarraProgresso_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }
+       
+
+       
+  

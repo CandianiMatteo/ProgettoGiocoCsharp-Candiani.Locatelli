@@ -76,6 +76,7 @@
         </Button>
         <Label Content="Due sono pochi,&#xA;quattro sono troppi.&#xA;Sono il minimo necessario&#xA;&#xA;&#xA;Chi sono?" HorizontalAlignment="Left" Height="141" Margin="37,36,0,0" VerticalAlignment="Top" Width="173"/>
         <TextBox x:Name="textboxcontatore" HorizontalAlignment="Left" Height="45" Margin="37,162,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="136"/>
+        <Button Content="reset" HorizontalAlignment="Left" Height="45" Margin="230,162,0,0" VerticalAlignment="Top" Width="134" Click="Button_Click"/>
 
     </Grid>
 </UserControl>

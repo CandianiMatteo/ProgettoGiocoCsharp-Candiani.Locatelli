@@ -75,7 +75,7 @@ namespace ProgettoVisualstudio
 
                 MessageBox.Show("Livello 2 Completato!");
 
-                // 1. Cerchiamo la finestra principale (MainWindow)
+                
                 var finestraPrincipale = Window.GetWindow(this) as MainWindow;
 
                 if (finestraPrincipale != null)
@@ -84,6 +84,19 @@ namespace ProgettoVisualstudio
                     finestraPrincipale.livello3.Visibility = Visibility.Visible;
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //rimetto a zero la variabile numerica
+            cont = 0;
+
+            //aggiorno graficamente la textbox per mostrare lo zero
+            textboxcontatore.Text = cont.ToString();
+
+            //opzionale: fermo il timer se era in esecuzione
+            timerAttesa.Stop();
+            secondiPassati = 0;
         }
     }
 }

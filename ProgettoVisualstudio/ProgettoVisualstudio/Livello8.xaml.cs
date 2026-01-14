@@ -77,7 +77,7 @@ namespace ProgettoVisualstudio
             CambiaColore(cliccato, Colors.DarkGreen);
             clickCorretti++;
 
-            if (clickCorretti == 3)
+            if (clickCorretti == 6)
             {
                 MessageBox.Show("Livello 8 completato!");
 

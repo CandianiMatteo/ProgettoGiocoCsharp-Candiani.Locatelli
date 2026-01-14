@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ProgettoVisualstudio
 {
-    internal class Utente
+    public class Utente
     {
-        private string username;
-        private float tempoGioco;
+        public string Username { get; set; }
+        public float TempoGioco { get; set; }
 
         public Utente(string username, float tempoGioco)
         {
-            this.username = username;
-            this.tempoGioco = tempoGioco;   
+            this.Username = username;
+            this.TempoGioco = tempoGioco;   
         }
     }
 }

@@ -30,31 +30,39 @@ namespace ProgettoVisualstudio
 
         private void button_salva_Click(object sender, RoutedEventArgs e)
         {
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMinutes(1);
-            timer.Start();
+            // Prendo il nome scritto nella TextBox
+            string nome = txtNomeUtente.Text;
 
-            String nomeFile = "Utenti.csv";
-            StreamWriter reader;
-
-            try {
-                reader = new StreamWriter(nomeFile, true);
-
-                reader.WriteLine(txtNomeUtente.Text,0);
-                utenti.Add(new Utente(txtNomeUtente.Text, 0.0f));
-                MessageBox.Show("Utente salvato con successo");
-                reader.Close();
-            }
-
-            catch(FileNotFoundException)
+            // Controllo che non sia vuoto
+            if (string.IsNullOrWhiteSpace(nome))
             {
-                Console.WriteLine("File non trovato");
+                MessageBox.Show("Inserisci un nome!");
+                return;
+            }
 
-            }
-            catch (IOException)
+            // Creo un nuovo utente con tempo iniziale = 0
+            Utente nuovo = new Utente(nome, 0);
+
+            // Recupero la MainWindow
+            MainWindow main = (MainWindow)Application.Current.MainWindow;
+
+            // Salvo l'utente nella MainWindow
+            main.UtenteCorrente = nuovo;
+
+            // Avvio il timer globale
+            main.timer.Start();
+
+            // Salvo il nome nel file Utenti.csv
+            using (StreamWriter w = new StreamWriter("Utenti.csv", true))
             {
-                Console.WriteLine("Errore di I/O");
+                w.WriteLine(nome);
             }
+
+            MessageBox.Show("Utente salvato con successo!");
+
+            // Chiudo la finestra di registrazione
+            this.Close();
         }
+
     }
 }

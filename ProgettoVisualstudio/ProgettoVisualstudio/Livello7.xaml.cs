@@ -16,21 +16,21 @@ using System.Windows.Shapes;
 namespace ProgettoVisualstudio
 {
     /// <summary>
-    /// Logica di interazione per Livello7.xaml
     /// </summary>
     public partial class Livello7 : UserControl
     {
-        
         public Livello7()
         {
             InitializeComponent();
         }
 
+        /// Gestisce il click sul pulsante di conferma.
+        /// Controlla se la risposta inserita è corretta e gestisce la transizione tra livelli.
         private void btnConferma_Click(object sender, RoutedEventArgs e)
         {
-            if (txtRisposta.Text == "Hard Disk" || txtRisposta.Text == "hard disk")
+            if (txtRisposta.Text == "Hard Disk" || txtRisposta.Text == "hard disk" || txtRisposta.Text == "HARD DISK")
             {
-                MessageBox.Show("Livello 7 Superato");
+                MessageBox.Show("Livello 7 Completato");
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
                 finestraPrincipale.livello7.Visibility = Visibility.Hidden;
                 finestraPrincipale.livello8.Visibility = Visibility.Visible;

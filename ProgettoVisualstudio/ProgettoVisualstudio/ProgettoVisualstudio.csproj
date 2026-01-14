@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cella.cs" />
     <Compile Include="Livello10.xaml.cs">
       <DependentUpon>Livello10.xaml</DependentUpon>
     </Compile>

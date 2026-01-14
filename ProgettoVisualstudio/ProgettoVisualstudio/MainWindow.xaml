@@ -172,5 +172,16 @@
             <local:Livello10 HorizontalAlignment="Center" Height="764" VerticalAlignment="Top" Width="1190" Loaded="Livello10_Loaded" Panel.ZIndex="-1"/>
         </Grid>
 
+        <!-- Griglia che contiene la classifica, nascosta all'inizio -->
+        <Grid x:Name="gridClassifica" Visibility="Hidden" Margin="20">
+
+            <!-- Lista che mostra nome + tempo -->
+            <ListBox x:Name="listaClassifica"
+             FontSize="20"
+             Background="Black"
+             Foreground="White"/>
+        </Grid>
+
+
     </Grid>
 </Window>

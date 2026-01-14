@@ -87,20 +87,13 @@ namespace ProgettoVisualstudio
         {
             MessageBox.Show("Complimenti! Hai superato tutte le prove del sistema.");
 
-
+            
 
             // Recupero la MainWindow
             MainWindow main = (MainWindow)Application.Current.MainWindow;
 
             // Ferma il timer
             main.timer.Stop();
-
-            // Verifica che l'utente sia registrato
-            if (main.UtenteCorrente == null)
-            {
-                MessageBox.Show("Devi registrarti prima di completare il gioco!");
-                return;
-            }
 
             // Salvo il tempo nell'utente
             main.UtenteCorrente.TempoGioco = main.TempoGioco;
@@ -113,6 +106,7 @@ namespace ProgettoVisualstudio
 
             // Mostro la classifica
             main.MostraClassifica();
+
         }
 
         private void BarraProgresso_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

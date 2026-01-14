@@ -10,27 +10,32 @@ namespace ProgettoVisualstudio
 {
     public partial class Livello9 : UserControl
     {
-        // Lista delle celle cliccate in ordine
-        private List<Point> percorso = new List<Point>();
+        // Lista delle celle cliccate dal giocatore, in ordine
+        private List<Cella> percorso = new List<Cella>();
 
-        // Coordinate della partenza e della meta
-        private Point partenza;
-        private Point meta;
+        // Cella di partenza e cella di arrivo
+        private Cella partenza;
+        private Cella meta;
 
+        // Generatore numeri casuali
         private Random rnd = new Random();
 
         public Livello9()
         {
             InitializeComponent();
 
-            GeneraPartenzaMeta();      // Crea partenza e meta
-            CollegaClick();            // Collega i click ai rettangoli
+            // Genera partenza e meta valide
+            GeneraPartenzaMeta();
 
-            Evidenzia(partenza, Brushes.LightSkyBlue); // Colore partenza
-            Evidenzia(meta, Brushes.LightGreen);       // Colore meta
+            // Collega l'evento click a tutti i rettangoli della griglia
+            CollegaClick();
+
+            // Evidenzia graficamente partenza e meta
+            Evidenzia(partenza, Brushes.LightSkyBlue);
+            Evidenzia(meta, Brushes.LightGreen);
         }
 
-        // Collega l'evento di click a ogni cella della griglia
+        // Collega l'evento MouseDown a ogni rettangolo della griglia
         private void CollegaClick()
         {
             foreach (UIElement child in GridLivello.Children)
@@ -38,57 +43,59 @@ namespace ProgettoVisualstudio
                     rect.MouseDown += CellaCliccata;
         }
 
-        // Quando clicchi una cella, ricavo riga e colonna
+        // Quando clicchi una cella, ricavo riga e colonna e avvio la logica
         private void CellaCliccata(object sender, MouseButtonEventArgs e)
         {
             Rectangle r = (Rectangle)sender;
-            int row = Grid.GetRow(r);
-            int col = Grid.GetColumn(r);
 
-            GestisciClick(new Point(row, col));
+            int row = Grid.GetRow(r);    // Riga cliccata
+            int col = Grid.GetColumn(r); // Colonna cliccata
+
+            // Passo la cella alla logica del livello
+            GestisciClick(new Cella(row, col));
         }
 
-        // Genera una partenza e una meta semplici
+        // Genera partenza e meta con distanza Manhattan tra 4 e 5
         private void GeneraPartenzaMeta()
         {
             // Partenza casuale
-            partenza = new Point(rnd.Next(0, 5), rnd.Next(0, 5));
+            partenza = new Cella(rnd.Next(0, 5), rnd.Next(0, 5));
 
-            // Meta casuale ma lontana almeno 4 passi (distanza Manhattan)
+            // Meta casuale ma con distanza minima 4 e massima 5
             do
             {
-                meta = new Point(rnd.Next(0, 5), rnd.Next(0, 5));
+                meta = new Cella(rnd.Next(0, 5), rnd.Next(0, 5));
             }
-            while (Distanza(partenza, meta) < 4);
+            while (Distanza(partenza, meta) != 4);
         }
 
-        // Distanza Manhattan (perfetta per griglie)
-        private int Distanza(Point a, Point b)
+        // Calcola la distanza Manhattan tra due celle
+        private int Distanza(Cella a, Cella b)
         {
-            return (int)(Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y));
+            return Math.Abs(a.R - b.R) + Math.Abs(a.C - b.C);
         }
 
-        // Logica principale del gioco
-        private void GestisciClick(Point cella)
+        // Gestisce tutta la logica quando il giocatore clicca una cella
+        private void GestisciClick(Cella cella)
         {
-            // Prima cella obbligatoria: la partenza
-            if (percorso.Count == 0 && cella != partenza)
+            // PRIMA REGOLA: la prima cella deve essere la partenza
+            if (percorso.Count == 0 && !cella.Equals(partenza))
             {
                 Reset();
                 return;
             }
 
-            // Non puoi cliccare due volte la stessa cella
+            // NON puoi cliccare due volte la stessa cella
             if (percorso.Contains(cella))
             {
                 Reset();
                 return;
             }
 
-            // Se non è la prima, deve essere adiacente (solo verticale/orizzontale)
+            // Se non è la prima cella, deve essere adiacente alla precedente
             if (percorso.Count > 0)
             {
-                Point ultima = percorso[percorso.Count - 1];
+                Cella ultima = percorso[percorso.Count - 1];
 
                 if (!Adiacenti(ultima, cella))
                 {
@@ -99,53 +106,60 @@ namespace ProgettoVisualstudio
 
             // Aggiungo la cella al percorso
             percorso.Add(cella);
+
+            // La coloro per far vedere il percorso
             Colora(cella, Brushes.LightBlue);
 
-            // Se arrivi alla meta → vittoria
-            if (cella == meta)
+            // SE ARRIVI ALLA META → VITTORIA
+            if (cella.Equals(meta))
             {
-                MessageBox.Show("Livello 9 completato!");
-                // RIGHE DA AGGIUNGERE QUI:
+                MessageBox.Show("Livello 9 Completato!");
+
                 MainWindow finestraPrincipale = (MainWindow)Application.Current.MainWindow;
                 finestraPrincipale.livello9.Visibility = Visibility.Hidden;
                 finestraPrincipale.gridlivello10.Visibility = Visibility.Visible;
                 return;
             }
 
-            // Se fai 5 passi senza arrivare → reset
-            if (percorso.Count == 5)
+            // Se fai più di 5 passi → reset
+            if (percorso.Count > 4)
+            {
                 Reset();
+                return;
+            }
         }
 
-        // Controllo adiacenza SOLO verticale/orizzontale
-        private bool Adiacenti(Point a, Point b)
+        // Controlla se due celle sono adiacenti (su/giù/sinistra/destra)
+        private bool Adiacenti(Cella a, Cella b)
         {
-            // Stessa riga → movimento orizzontale
-            bool orizzontale = a.X == b.X && Math.Abs(a.Y - b.Y) == 1;
+            // Movimento orizzontale
+            bool orizzontale = a.R == b.R && Math.Abs(a.C - b.C) == 1;
 
-            // Stessa colonna → movimento verticale
-            bool verticale = a.Y == b.Y && Math.Abs(a.X - b.X) == 1;
+            // Movimento verticale
+            bool verticale = a.C == b.C && Math.Abs(a.R - b.R) == 1;
 
             return orizzontale || verticale;
         }
 
-        // Colora una cella normale
-        private void Colora(Point p, Brush colore)
+        // Colora una cella della griglia
+        private void Colora(Cella p, Brush colore)
         {
             foreach (UIElement child in GridLivello.Children)
                 if (child is Rectangle rect &&
-                    Grid.GetRow(rect) == (int)p.X &&
-                    Grid.GetColumn(rect) == (int)p.Y)
+                    Grid.GetRow(rect) == p.R &&
+                    Grid.GetColumn(rect) == p.C)
+                {
                     rect.Fill = colore;
+                }
         }
 
-        // Evidenzia partenza o meta
-        private void Evidenzia(Point p, Brush colore)
+        // Evidenzia graficamente partenza e meta
+        private void Evidenzia(Cella p, Brush colore)
         {
             foreach (UIElement child in GridLivello.Children)
                 if (child is Rectangle rect &&
-                    Grid.GetRow(rect) == (int)p.X &&
-                    Grid.GetColumn(rect) == (int)p.Y)
+                    Grid.GetRow(rect) == p.R &&
+                    Grid.GetColumn(rect) == p.C)
                 {
                     rect.Fill = colore;
                     rect.StrokeThickness = 3;
@@ -155,9 +169,10 @@ namespace ProgettoVisualstudio
         // Reset totale del livello
         private void Reset()
         {
+            // Cancello il percorso
             percorso.Clear();
 
-            // Ripristina grafica base
+            // Ripristino grafica base
             foreach (UIElement child in GridLivello.Children)
                 if (child is Rectangle rect)
                 {
@@ -165,16 +180,12 @@ namespace ProgettoVisualstudio
                     rect.StrokeThickness = 1.5;
                 }
 
-            // Rigenera partenza e meta
+            // Rigenero partenza e meta
             GeneraPartenzaMeta();
 
-            // Evidenzia di nuovo
+            // Evidenzio di nuovo partenza e meta
             Evidenzia(partenza, Brushes.LightSkyBlue);
             Evidenzia(meta, Brushes.LightGreen);
         }
     }
 }
-
-
-
-
